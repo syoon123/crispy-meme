@@ -2,13 +2,18 @@ from display import *
 from draw import *
 
 screen = new_screen()
-color = [ 0, 255, 0 ]
+color1 = [ 0, 255, 0 ]
+color2 = [ 0, 0, 255 ]
 
-draw_line(screen, 50, 50, 450, 100, color)
+#Axes
+draw_line(screen, 0, 250, 500, 250, color1)
+draw_line(screen, 250, 0, 250, 500, color1)
 
-draw_line(screen, 50, 50, 100, 450, color)
+#y=x, y=-x
+draw_line(screen, 0, 0, 500, 500, color1)
+draw_line(screen, 0, 500, 500, 0, color1)
 
-draw_line(screen, 50, 250, 450, 100, color)
+
 
 display(screen)
 save_extension(screen, 'img.png')
